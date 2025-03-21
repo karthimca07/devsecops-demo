@@ -1,6 +1,5 @@
 # Build stage
-FROM node:20-alpine AS build
-RUN apk --no-cache add expat=2.7.0-r0
+FROM node:23-alpine AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
